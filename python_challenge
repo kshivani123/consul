@@ -20,3 +20,9 @@ def find_duplicate_transactions(*transactions: dict):
                   default_data.append(i)
 
   print(default_data)
+tr1 = {'id': 39, 'sourceAccount': 'my_account', 'targetAccount': 'coffee_shop', 'amount': -70, 'category': 'eating_out', 'time': '2018-05-15T09:12:09.000Z'}
+tr2 = {'id': 36, 'sourceAccount': 'my_account', 'targetAccount': 'internet_shop', 'amount': -1650, 'category': 'other', 'time': '2018-05-08T21:36:41.000Z'}
+tr3 = {'id': 41, 'sourceAccount': 'my_account', 'targetAccount': 'supermarket', 'amount': -850, 'category': 'groceries', 'time': '2018-05-20T18:51:31.000Z'}
+tr4 = {'id': 391, 'sourceAccount': 'my_account', 'targetAccount': 'coffee_shop', 'amount': -70, 'category': 'eating_out', 'time': '2018-05-15T09:12:10.000Z'}
+
+find_duplicate_transactions(tr1,tr2,tr3,tr4)
