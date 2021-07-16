@@ -2,7 +2,7 @@ import datetime
 
 def find_duplicate_transactions(*transactions: dict):
   sum1=0
-  default_data=[][]
+  default_data=[]
   for i in transactions:
       for j in transactions:
           if (i['category'] == j['category']) and (i['sourceAccount'] == j['sourceAccount']) and (i['targetAccount'] == j['targetAccount']) and (i['id']!=j['id']):
