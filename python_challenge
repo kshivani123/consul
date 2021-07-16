@@ -1,0 +1,22 @@
+import datetime
+
+def find_duplicate_transactions(*transactions: dict):
+  sum1=0
+  default_data=[][]
+  for i in transactions:
+      for j in transactions:
+          if (i['category'] == j['category']) and (i['sourceAccount'] == j['sourceAccount']) and (i['targetAccount'] == j['targetAccount']) and (i['id']!=j['id']):
+              timei = datetime.datetime.fromisoformat(i['time'][0:-1])
+              timej = datetime.datetime.fromisoformat(j['time'][0:-1])
+              if timei>timej:
+                  diff = timei-timej
+              else:
+                  diff = timej-timei
+
+              totalInSec = diff.total_seconds()
+              print (totalInSec)
+
+              if totalInSec<=60:
+                  default_data.append(i)
+
+  print(default_data)
